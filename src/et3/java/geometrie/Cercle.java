@@ -4,30 +4,29 @@ public final class Cercle extends Forme{
     private int rayon;
 
     @Override
-    public void mettreAJourDesc()
+    public String toString()
     {
-        descption = "[ Cercle\n" +
-                "\t\t[ centre de gravité : x ="+centreDeGravite.x+" , y ="+centreDeGravite.y+"]\n" +
+        return "[ Cercle\n" +
+                "\t\t[ centre de gravité : "+centreDeGravite.toString()+"]\n" +
                 "\t\t[ rayon : "+rayon+"]\n" +
-                "\t\t[ couleur : r ="+color.getRed()+" , g ="+color.getGreen()+" , b ="+color.getBlue()+"]\n" +
+                "\t\t[ couleur : "+color.toString()+"]\n" +
                 "\t]";
 
     }
     public Cercle(){
         super();
         rayon = 0;
-        this.mettreAJourDesc();
+
     }
 
     public Cercle(int x, int y, int rayon){
         super(x,y);
         this.rayon = rayon;
-        this.mettreAJourDesc();
+
     }
 
     public Cercle(int x, int y, int rayon, int r, int g, int b){
         super(x,y,r,g,b);
         this.rayon = rayon;
-        this.mettreAJourDesc();
     }
 }

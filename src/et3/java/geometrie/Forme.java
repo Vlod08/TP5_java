@@ -8,15 +8,21 @@ import java.util.Collection;
 public abstract class Forme{
     protected Point centreDeGravite;
     protected Color color;
-    protected String descption;
+
+    @Override
+    public String toString() {
+        return "[ Forme inconnue\n" +
+                "\t\t[ centre de gravité : "+centreDeGravite.toString()+"]\n" +
+                "\t\t[ couleur : r ="+color.toString()+"]\n" +
+                "\t]";
+    }
+
 
     public Forme(){
+        Point p1 = new Point(1,2);
+
         centreDeGravite = new Point(0,0);
         color = new Color(0,0,0);
-        descption = "[ Forme inconnue\n" +
-                "\t\t[ centre de gravité : x =0 , y =0]\n" +
-                "\t\t[ couleur : r =0 , g =0 , b =0]\n" +
-                "\t]";
     }
     public Forme(int x, int y){
         this();
@@ -45,18 +51,5 @@ public abstract class Forme{
     public void setColor(int r, int b, int g){
         color = new Color(r,g,b); //On cree une nouvelle instance de couleur car la classe Color est immutable
     }
-
-    public String getDescption(){
-        return descption;
-    }
-
-    public void mettreAJourDesc(){
-        descption = "[ Forme inconnue\n" +
-                "\t\t[ centre de gravité : x ="+centreDeGravite.x+" , y ="+centreDeGravite.y+"]\n" +
-                "\t\t[ couleur : r ="+color.getRed()+" , g ="+color.getGreen()+" , b ="+color.getBlue()+"]\n" +
-                "\t]";
-    }
-
-
 
 }
