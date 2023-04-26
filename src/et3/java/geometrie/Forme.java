@@ -11,8 +11,7 @@ public abstract class Forme{
     protected String descption;
 
     public Forme(){
-        centreDeGravite.x = 0;
-        centreDeGravite.y = 0;
+        centreDeGravite = new Point(0,0);
         color = new Color(0,0,0);
         descption = "[ Forme inconnue\n" +
                 "\t\t[ centre de gravité : x =0 , y =0]\n" +
