@@ -3,8 +3,9 @@ package et3.java.geometrie;
 import java.lang.Object;
 import java.awt.Point;
 import java.awt.Color;
+import java.util.Collection;
 
-public abstract class Forme {
+public abstract class Forme{
     protected Point centreDeGravite;
     protected Color color;
     protected String descption;
